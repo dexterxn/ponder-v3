@@ -7,6 +7,10 @@ import { Button } from '@mui/material';
 
 function HomePage () {
 
+    function AutoSave(e){
+        console.log(e.target.value);
+    }
+
     return (
         <>
 
@@ -26,7 +30,7 @@ function HomePage () {
                     maxWidth: '100%',
                 }}
                 >
-                <TextField 
+                <TextField onChange={AutoSave}
                     fullWidth label="Notes" 
                     id="standard-multiline-static"
                     multiline
