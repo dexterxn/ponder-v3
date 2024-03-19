@@ -2,22 +2,44 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import NavigationBar from '../components/NavigationBar';
+import { Button } from '@mui/material';
 
 
 function HomePage () {
 
     return (
         <>
-            <NavigationBar/>
-            <h1> Home page</h1>
-            <TextField
-                id="outlined-multiline-static"
-                label="Multiline"
-                multiline
-                rows={4}
-                defaultValue="Insert Notes"
-            />
+
+        <NavigationBar/>
+        <div style = {{ 
+            marginLeft: "5%",
+            marginRight: "5%",
+            margin: "dense",
+            alignItems: 'center'
+            }}>
+
+                <h1>Home page</h1>
+            <Box
+                sx={{
+                    width: 500,
+                    // height: 500,
+                    maxWidth: '100%',
+                }}
+                >
+                <TextField 
+                    fullWidth label="Notes" 
+                    id="standard-multiline-static"
+                    multiline
+                    rows={4}
+                    defaultValue="some kind of text box "
+                />
+            </Box>
+            <Button style={{ marginTop: '1%' }} variant="contained">Contained</Button>
+
+        </div>
+
         </>
+
     );
 }
 
